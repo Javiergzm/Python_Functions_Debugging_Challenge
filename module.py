@@ -25,7 +25,9 @@ Rules:
 #   double_number(-3) -> -6
 #
 def double_number(num: int) -> int:
-    return num + num + 1
+    output = num
+    output *= 2
+    return output
 
 
 # -------------------------------------------------
@@ -43,7 +45,7 @@ def count_vowels(s: str) -> int:
     count = 0
 
     for char in s:
-        if char in "aeiou":  
+        if char.lower() in "aeiou":  
             count += 1
 
     return count
@@ -62,8 +64,8 @@ def sum_list(numbers: list) -> int:
 
     total = 0
 
-    for i in range(len(numbers) - 1): 
-        total += numbers[i]
+    for i in numbers: 
+        total += i
 
     return total
 
