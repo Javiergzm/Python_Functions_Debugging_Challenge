@@ -83,7 +83,7 @@ def reverse_string(s: str) -> str:
     result = ""
 
     for char in s:
-        result += char 
+        result += char +result 
 
     return result
 
@@ -98,7 +98,7 @@ def reverse_string(s: str) -> str:
 #   first_character("hello") -> "h"
 #
 def first_character(s: str) -> str:
-    return s[1] 
+    return s[0] 
 
 
 # -------------------------------------------------
@@ -111,11 +111,11 @@ def first_character(s: str) -> str:
 #
 def max_in_list(numbers: list) -> int:
 
-    maximum = 0   
+    maximum = numbers[0] 
 
     for num in numbers:
         if num > maximum:
-            maximum += num
+            maximum = num
 
     return maximum
 
@@ -133,8 +133,9 @@ def remove_spaces(s: str) -> str:
     result = ""
 
     for char in s:
-        if char == " ":   
+        if char != " ":   
             result += char
+    return result
 
 
 # -------------------------------------------------
@@ -150,7 +151,7 @@ def count_positive(numbers: list) -> int:
     count = 0
 
     for num in numbers:
-        if num >= 0:   
+        if num > 0:   
             count += 1
 
     return count
